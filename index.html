@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Shoe Catalog</title>
+    <link rel="stylesheet" href="shoe_catalogue.css">
   </head>
   <body>
     <header>
@@ -10,52 +11,60 @@
     </header>
     <div class="wrapper">
       <div class="sideNav">
-        <h3>Refine result:</h3>
+        <h2>Refine result:</h2>
         <ul>
           <li><h3>Brands</h3>
-            <div class="radio">
+            <div class="radio" id="all">
+              <input type="radio" name="brand" value="All" checked="true">
+              <label for="brand">All</label>
+            </div>
+            <div class="radio" id="jim">
               <input type="radio" name="brand" value="Jimmy">
               <label for="brand">Jimmy</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="fab">
               <input type="radio" name="brand" value="Fabiani">
               <label for="brand">Fabiani</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="run">
               <input type="radio" name="brand" value="RunFirst">
               <label for="brand">RunFirst</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="tom">
               <input type="radio" name="brand" value="Tommy">
               <label for="brand">Tommy</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="van">
               <input type="radio" name="brand" value="Vans">
               <label for="brand">Vans</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="guc">
               <input type="radio" name="brand" value="Gucci">
               <label for="brand">Gucci</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="con">
               <input type="radio" name="brand" value="Converse">
               <label for="brand">Converse</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="bro">
               <input type="radio" name="brand" value="Bronx">
               <label for="brand">Bronx</label>
             </div>
           </li>
           <li><h3>Color</h3>
-            <div class="radio">
+            <div class="radio" id="allc">
+              <input type="radio" name="color" value="all">
+              <label for="color">All</label>
+            </div>
+            <div class="radio" id="bla">
               <input type="radio" name="color" value="black">
               <label for="color">Black</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="whi">
               <input type="radio" name="color" value="white">
               <label for="color">White</label>
             </div>
-            <div class="radio">
+            <div class="radio" id="red">
               <input type="radio" name="color" value="red">
               <label for="color">Red</label>
             </div>
@@ -83,10 +92,288 @@
             Brand: <span class="brand">Bronx</span><br>
             Color: <span class="color">black</span><br>
             Price: R<span class="price">599</span><br>
-            Stock Available: <span class="stock">20</span>
+            Stock Available: <span class="stock">20</span><br>
+            Avail. sizes: <span class="size">5,6,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="jimmy/pink.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Jimmy</span><br>
+            Color: <span class="color">pink</span><br>
+            Price: R<span class="price">2499</span><br>
+            Stock Available: <span class="stock">13</span><br>
+            Avail. sizes: <span class="size">6,7,7,7,8</span>
+            <span class="sex">female</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="gucci/blue.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Gucci</span><br>
+            Color: <span class="color">blue</span><br>
+            Price: R<span class="price">3499</span><br>
+            Stock Available: <span class="stock">3</span><br>
+            Avail. sizes: <span class="size">7,8,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/black.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">black</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">12</span><br>
+            Avail. sizes: <span class="size">1,2,3,7,4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="gucci/red.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Gucci</span><br>
+            Color: <span class="color">red</span><br>
+            Price: R<span class="price">3499</span><br>
+            Stock Available: <span class="stock">3</span><br>
+            Avail. sizes: <span class="size">6,7,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/blue.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">blue</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">11</span><br>
+            Avail. sizes: <span class="size">4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/brown.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">brown</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">19</span><br>
+            Avail. sizes: <span class="size">1,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/green.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">green</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">19</span><br>
+            Avail. sizes: <span class="size">1,2,3,4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="jimmy/white.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Jimmy</span><br>
+            Color: <span class="color">white</span><br>
+            Price: R<span class="price">2499</span><br>
+            Stock Available: <span class="stock">13</span><br>
+            Avail. sizes: <span class="size">6,7,7,7,8</span>
+            <span class="sex">female</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="bronx/cream.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Bronx</span><br>
+            Color: <span class="color">cream</span><br>
+            Price: R<span class="price">599</span><br>
+            Stock Available: <span class="stock">20</span><br>
+            Avail. sizes: <span class="size">10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="bronx/white.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Bronx</span><br>
+            Color: <span class="color">white</span><br>
+            Price: R<span class="price">599</span><br>
+            Stock Available: <span class="stock">20</span><br>
+            Avail. sizes: <span class="size">6,7,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="gucci/cream.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Gucci</span><br>
+            Color: <span class="color">cream</span><br>
+            Price: R<span class="price">3499</span><br>
+            Stock Available: <span class="stock">2</span><br>
+            Avail. sizes: <span class="size">6,7</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/pink.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">pink</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">19</span><br>
+            Avail. sizes: <span class="size">1,2,7,10</span>
+            <span class="sex">female</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/purple.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">purple</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">19</span><br>
+            Avail. sizes: <span class="size">3,4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/red.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">red</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">13</span><br>
+            Avail. sizes: <span class="size">1,2,4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="jimmy/sax.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Jimmy</span><br>
+            Color: <span class="color">sax</span><br>
+            Price: R<span class="price">2499</span><br>
+            Stock Available: <span class="stock">13</span><br>
+            Avail. sizes: <span class="size">6,7,7,7,8</span>
+            <span class="sex">female</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/white.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">white</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">5</span><br>
+            Avail. sizes: <span class="size">1,2,3,4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/yellow.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">yellow</span><br>
+            Price: R<span class="price">899</span><br>
+            Stock Available: <span class="stock">5</span><br>
+            Avail. sizes: <span class="size">1,2,3,4,7,8,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="converse/allblack.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Converse</span><br>
+            Color: <span class="color">allblack</span><br>
+            Price: R<span class="price">1099</span><br>
+            Stock Available: <span class="stock">9</span><br>
+            Avail. sizes: <span class="size">1,2,3,6,7,4,10</span>
+            <span class="sex">unisex</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="fabiani/brown.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Fabiani</span><br>
+            Color: <span class="color">brown</span><br>
+            Price: R<span class="price">2399</span><br>
+            Stock Available: <span class="stock">12</span><br>
+            Avail. sizes: <span class="size">6,7,8,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="fabiani/maroon.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Fabiani</span><br>
+            Color: <span class="color">maroon</span><br>
+            Price: R<span class="price">2399</span><br>
+            Stock Available: <span class="stock">7</span><br>
+            Avail. sizes: <span class="size">6,7,8,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="fabiani/white.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Fabiani</span><br>
+            Color: <span class="color">white</span><br>
+            Price: R<span class="price">2399</span><br>
+            Stock Available: <span class="stock">4</span><br>
+            Avail. sizes: <span class="size">6,7,8,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="jimmy/black.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Jimmy</span><br>
+            Color: <span class="color">black</span><br>
+            Price: R<span class="price">2499</span><br>
+            Stock Available: <span class="stock">2</span><br>
+            Avail. sizes: <span class="size">6,7</span>
+            <span class="sex">female</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="gucci/white.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Gucci</span><br>
+            Color: <span class="color">white</span><br>
+            Price: R<span class="price">3499</span><br>
+            Stock Available: <span class="stock">3</span><br>
+            Avail. sizes: <span class="size">6,7</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="gucci/black.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Gucci</span><br>
+            Color: <span class="color">black</span><br>
+            Price: R<span class="price">3499</span><br>
+            Stock Available: <span class="stock">4</span><br>
+            Avail. sizes: <span class="size">6,7,8,10</span>
+            <span class="sex">male</span>
+          </p>
+        </div>
+        <div class="shoe">
+          <img src="gucci/brown.jpg" alt="picture of this shoe">
+          <p class="info">
+            Brand: <span class="brand">Gucci</span><br>
+            Color: <span class="color">brown</span><br>
+            Price: R<span class="price">3499</span><br>
+            Stock Available: <span class="stock">4</span><br>
+            Avail. sizes: <span class="size">6,7,8,10</span>
+            <span class="sex">male</span>
           </p>
         </div>
       </div>
     </div>
   </body>
+  <script src="shoe_catalogue.js" charset="utf-8"></script>
 </html>

@@ -1,66 +1,108 @@
-var stock = [
-  {
-    brand: "Bronx",
-    color: ["black","cream","white"],
-    size: [[1,2,5,7],[2,4],[2,3,7]],
-    price: 599,
-    avail:20
-  },
-  {
-    brand: "Converse",
-    color: ["Allblack","black","blue","white","brown","green","pink","purple","red","yellow"],
-    size: [[5,7],[1,7],[1,2,7],[1,2],[2,5],[1,2,5,7],[2,4],[2,3,7]],
-    price: 1099,
-    avail:20
-  },
-  {
-    brand: "Fabiani",
-    color: ["brown","maroon","white"],
-    size: [[2,5,10],[2,11],[7,9,10]],
-    price: 2399,
-    avail:8
-  },
-  {
-    brand: "RunFirst",
-    color: ["black","blue","green","pink","purple","skyblue"],
-    size: [[1,2,5,7],[2,4],[2,3,7],[1,2,5,7],[2,4],[2,3,7]],
-    price: 59,
-    avail:8
-  },
-  {
-    brand: "Tommy",
-    color: ["black","blue","white","navy","orange","red","sax"],
-    size: [[1,2,5,7],[2,4],[2,3,7],[1,2,5,7],[2,4],[2,3,7],[1,4,6]],
-    price: 299,
-    avail: 17
-  },
-  {
-    brand: "Vans",
-    color: ["blue","brown","green","greenBlack","navy","red","redOrange","skyblue"],
-    size: [[1,2,5,7],[2,4],[2,3,7],[1,2,5,7],[2,4],[2,3,7],[1,4,6],[1,4,6]],
-    price: 1049,
-    avail: 13
-  },
-  {
-    brand: "Gucci",
-    color: ["black","cream","white","brown","red","blue"],
-    size: [[1,2,5,7],[2,4],[2,3,7],[1,2,5,7],[2,4],[2,3,7]],
-    price: 2499,
-    avail: 13
-  },
-  {
-    brand: "Jimmy",
-    color: ["black","sax","white","pink"],
-    size: [[1,2,5,7],[2,4],[2,3,7]],
-    price: 4499,
-    avail: 13
-  },
-];
-function newStock(name,colors,sizes) {
+var stock = [];
+var shoes = document.querySelector(".shoes");
+//********************************
+function newStock(name,colors,cost,sizes) {
   var newItem = {
     brand: name,
     color: colors,
-    size: sizes
+    price: cost,
+    size: sizes.split(",")
   };
   return newItem;
 }
+//********************************
+function createStock() {
+  var brand;
+  var color;
+  var price;
+  var cost;
+  var sizes;
+  for(var i = 0; i<shoes.children.length; i++){
+    brand = shoes.children[i].querySelector(".brand").innerHTML;
+    color = shoes.children[i].querySelector(".color").innerHTML;
+    sizes = shoes.children[i].querySelector(".size").innerHTML;
+    cost = shoes.children[i].querySelector(".price").innerHTML;
+    stock.push(newStock(brand,color,cost,sizes));
+  }
+  return stock;
+}
+//*********************************
+function brandFilter(brand) {
+  for(var i=0; i<shoes.children.length; i++){
+    if(shoes.children[i].querySelector(".brand").innerHTML == brand || brand.length==0){
+      shoes.children[i].style.display = "inline-block";
+    }
+    else{
+      shoes.children[i].style.display = "none";
+    }
+  }
+}
+//**********************************
+function colorFilter(color) {
+  for(var i=0; i<shoes.children.length; i++){
+    if(shoes.children[i].querySelector(".color").innerHTML == color || color.length==0){
+      shoes.children[i].style.display = "inline-block";
+    }
+    else{
+      shoes.children[i].style.display = "none";
+    }
+  }
+}
+var allc = document.querySelector("#allc");
+allc.addEventListener("click",function() {
+  allc.children[0].checked = true;
+  colorFilter("");
+})
+var bla = document.querySelector("#bla");
+bla.addEventListener("click",function() {
+  bla.children[0].checked = true;
+  colorFilter("black");
+})
+var all = document.querySelector("#all");
+all.addEventListener("click",function() {
+  all.children[0].checked = true;
+  brandFilter("");
+});
+var jim = document.querySelector("#jim");
+jim.addEventListener("click",function() {
+  jim.children[0].checked = true;
+  brandFilter("Jimmy");
+});
+var fab = document.querySelector("#fab");
+fab.addEventListener("click",function() {
+  fab.children[0].checked = true;
+  brandFilter("Fabiani");
+});
+var run = document.querySelector("#run");
+run.addEventListener("click",function() {
+  run.children[0].checked = true;
+  brandFilter("RunFirst");
+});
+var tom = document.querySelector("#tom");
+tom.addEventListener("click",function() {
+  tom.children[0].checked = true;
+  brandFilter("Tommy");
+});
+var van = document.querySelector("#van");
+van.addEventListener("click",function() {
+  van.children[0].checked = true;
+  brandFilter("Vans");
+});
+var guc = document.querySelector("#guc");
+guc.addEventListener("click",function() {
+  guc.children[0].checked = true;
+  brandFilter("Gucci");
+});
+var con = document.querySelector("#con");
+con.addEventListener("click",function() {
+  con.children[0].checked = true;
+  brandFilter("Converse");
+});
+var bro = document.querySelector("#bro");
+bro.addEventListener("click",function() {
+  bro.children[0].checked = true;
+  brandFilter("Bronx");
+});
+createStock();
+
+// console.log(stock);
