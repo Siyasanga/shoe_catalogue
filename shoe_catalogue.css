@@ -3,6 +3,12 @@ header{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.brandOn{
+  display: inline-block;
+}
+.brandOff{
+  display: none;
+}
 .sex{
   display: none;
 }
@@ -11,7 +17,6 @@ h2{
   padding-left: 20px;
 }
 .shoe{
-  display: inline-block;
   width: 300px;
   overflow: auto;
   padding-left: 10px;

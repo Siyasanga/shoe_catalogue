@@ -8,10 +8,21 @@
   <body>
     <header>
       Welcome to thee Shoe Catalogue
+      <div class="newStock">
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" placeholder="Enter brand name">
+        <label for="color">Color:</label>
+        <input type="text" name="color" placeholder="Enter shoe color">
+        <label for="sizes">Avalable sizes:</label>
+        <input type="text" name="" placeholder="Enter size for each pair, e.g: 1,1,2,3" style="width:240px"><br>
+        <label for="image">Upload Picture of the shoe:</label>
+        <input type="file" name="image">
+        <input type="button" name="submit" value="Submit">
+      </div>
     </header>
     <div class="wrapper">
       <div class="sideNav">
-        <h2>Refine result:</h2>
+        <h2>Refine results:</h2>
         <ul>
           <li><h3>Brands</h3>
             <div class="radio" id="all">
@@ -86,7 +97,7 @@
         </ul>
       </div>
       <div class="shoes">
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="bronx/black.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Bronx</span><br>
@@ -97,7 +108,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="jimmy/pink.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Jimmy</span><br>
@@ -108,7 +119,7 @@
             <span class="sex">female</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="gucci/blue.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Gucci</span><br>
@@ -119,7 +130,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/black.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -130,7 +141,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="gucci/red.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Gucci</span><br>
@@ -141,7 +152,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/blue.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -152,7 +163,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/brown.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -163,7 +174,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/green.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -174,7 +185,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="jimmy/white.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Jimmy</span><br>
@@ -185,7 +196,7 @@
             <span class="sex">female</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="bronx/cream.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Bronx</span><br>
@@ -196,7 +207,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="bronx/white.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Bronx</span><br>
@@ -207,7 +218,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="gucci/cream.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Gucci</span><br>
@@ -218,7 +229,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/pink.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -229,7 +240,7 @@
             <span class="sex">female</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/purple.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -240,7 +251,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/red.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -251,7 +262,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="jimmy/sax.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Jimmy</span><br>
@@ -262,7 +273,7 @@
             <span class="sex">female</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/white.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -273,7 +284,7 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="converse/yellow.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
@@ -284,18 +295,18 @@
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
-          <img src="converse/allblack.jpg" alt="picture of this shoe">
+        <div class="shoe brandOn">
+            <img src="converse/allblack.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Converse</span><br>
-            Color: <span class="color">allblack</span><br>
+            Color: <span class="color">black</span><br>
             Price: R<span class="price">1099</span><br>
             Stock Available: <span class="stock">9</span><br>
             Avail. sizes: <span class="size">1,2,3,6,7,4,10</span>
             <span class="sex">unisex</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="fabiani/brown.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Fabiani</span><br>
@@ -306,7 +317,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="fabiani/maroon.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Fabiani</span><br>
@@ -317,7 +328,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="fabiani/white.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Fabiani</span><br>
@@ -328,7 +339,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="jimmy/black.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Jimmy</span><br>
@@ -339,7 +350,7 @@
             <span class="sex">female</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="gucci/white.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Gucci</span><br>
@@ -350,7 +361,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="gucci/black.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Gucci</span><br>
@@ -361,7 +372,7 @@
             <span class="sex">male</span>
           </p>
         </div>
-        <div class="shoe">
+        <div class="shoe brandOn">
           <img src="gucci/brown.jpg" alt="picture of this shoe">
           <p class="info">
             Brand: <span class="brand">Gucci</span><br>
