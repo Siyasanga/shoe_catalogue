@@ -3,6 +3,17 @@ header{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.inp{
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.error{
+  color: red;
+  font-size: 0.9em;
+  margin-top: 1px;
+  text-align: left;
+}
 .brandOn{
   display: inline-block;
 }
