@@ -7,17 +7,32 @@
   </head>
   <body>
     <header>
-      Welcome to thee Shoe Catalogue
-      <div class="newStock">
-        <label for="brand">Brand:</label>
-        <input type="text" name="brand" placeholder="Enter brand name">
-        <label for="color">Color:</label>
-        <input type="text" name="color" placeholder="Enter shoe color">
-        <label for="sizes">Avalable sizes:</label>
-        <input type="text" name="" placeholder="Enter size for each pair, e.g: 1,1,2,3" style="width:240px"><br>
-        <label for="image">Upload Picture of the shoe:</label>
-        <input type="file" name="image">
-        <input type="button" name="submit" value="Submit">
+      <h1>Welcome to thee Shoe Catalogue</h1>
+      <div id="newStock">
+        </form>
+          <div class="inp">
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand" required placeholder="Enter brand name">
+            <p style="display:none"class="error" id="errBrand">brand name is a required field</p>
+          </div>
+          <div class="inp">
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" placeholder="Enter shoe color">
+            <p style="display:none"class="error" id="errColor">shoe color is a required field</p>
+          </div>
+          <div class="inp">
+            <label for="sizes">Avalable sizes:</label>
+            <input type="text" id="sizes" name="sizes" placeholder="Enter size for each pair, e.g: 3,3,5,7" style="width:240px"><br>
+            <p style="display:none"class="error" id="errSize">please make sure size for each pair is seperated by a comma</p>
+          </div>
+          <div class="inp">
+            <label for="image">Upload Picture of the shoe:</label>
+            <input type="file" id="image" name="image">
+            <p style="display:none"class="error" id="errImage">Don't forget to upload the picture</p>
+          </div>
+          <button type="submit" id="submit" name="button">Submit</button>
+
+        <form class="" action="index.html" method="post">
       </div>
     </header>
     <div class="wrapper">
