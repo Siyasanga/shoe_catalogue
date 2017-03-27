@@ -27,6 +27,7 @@ function createStock() {
   }
   return stock;
 }
+createStock();
 //*******************************************
 function brandFilter(brand) {
   brandFocus = brand;
@@ -68,7 +69,7 @@ var allc = document.querySelector("#allc");
 allc.addEventListener("click",function() {
   brandFilter(brandFocus);
   colorFilter("");
-  allc.children[0].checked = true;  
+  allc.children[0].checked = true;
 })
 var bla = document.querySelector("#bla");
 bla.addEventListener("click",function() {
@@ -144,6 +145,25 @@ bro.addEventListener("click",function() {
   brandFilter(brandFocus);
   brandFilter("Bronx");
 });
-createStock();
-
+newItem = document.querySelector(#newStock);
+function validateForm() {
+  flag = true;
+  if(document.querySelector("#brand").value == ""){
+    document.querySelector("#errBrand").style.display = "block";
+    flag = false;
+  }
+  if(document.querySelector("#color").value == ""){
+    document.querySelector("#errBrand").style.display = "block";
+    flag = false;
+  }
+  if(document.querySelector("#sizes").value == ""){
+    document.querySelector("#errBrand").style.display = "block";
+    flag = false;
+  }
+  if(document.querySelector("#image").value == ""){
+    document.querySelector("#errImage").style.display = "block";
+    flag = false;
+  }
+  return flag;
+}
 // console.log(stock);
