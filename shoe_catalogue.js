@@ -145,7 +145,7 @@ bro.addEventListener("click",function() {
   brandFilter(brandFocus);
   brandFilter("Bronx");
 });
-newItem = document.querySelector(#newStock);
+newItem = document.querySelector("#newStock");
 function validateForm() {
   flag = true;
   if(document.querySelector("#brand").value == ""){
