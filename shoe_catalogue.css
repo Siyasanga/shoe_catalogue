@@ -3,6 +3,14 @@ header{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+#submit{
+  margin-top: 13px;
+  width: 200px;
+  padding: 3px;
+}
+.stock{
+  display: none;
+}
 .range{
   margin-left: -10px;
   display: none;

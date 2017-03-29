@@ -167,3 +167,16 @@ function validateForm() {
   return flag;
 }
 // console.log(stock);
+var submit = document.querySelector("#submit");
+submit.addEventListener("click",function() {
+  var copy = document.querySelector(".shoe");
+  copy.querySelector(".brand").innerHTML = document.querySelector("#brand").value;
+  copy.querySelector(".color").innerHTML = document.querySelector("#color").value;
+  copy.querySelector(".price").innerHTML = document.querySelector("#price").value;
+  copy.querySelector(".brand").innerHTML = document.querySelector("#brand").value;
+  copy.querySelector(".sex").innerHTML = document.querySelector("#sex").value;
+  copy.querySelector(".size").innerHTML = document.querySelector("#sizes").value;
+  copy.querySelector(".image").src = document.querySelector("#image").value.substring(12);
+  shoes.appendChild(copy);
+  brandFilter(brandFocus);
+})
