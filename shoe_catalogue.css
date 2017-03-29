@@ -3,6 +3,16 @@ header{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.range{
+  margin-left: -10px;
+  display: none;
+}
+.range input{
+  width: 60px;
+}
+.li{
+  display: inline;
+}
 .inp{
   display: inline-block;
   margin-left: 20px;
