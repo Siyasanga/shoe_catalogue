@@ -180,3 +180,11 @@ submit.addEventListener("click",function() {
   shoes.appendChild(copy);
   brandFilter(brandFocus);
 })
+//**************Price Filtering*****************
+var rail = document.querySelector("#rail");
+rail.addEventListener("click",function() {
+  console.log(event.clientX);
+  console.log(event.screenX);
+  console.log(event.screenX-event.clientX);
+  // document.querySelector("#range").style.marginLeft = (event.screenX - event.clientX)+"px";
+})
