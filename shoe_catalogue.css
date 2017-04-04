@@ -5,45 +5,25 @@ header{
 }
 /********Price Filter*********/
 .panel{
+  margin-top: -20px;
   width: 100%;
-  background-color: skyblue;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: lighter;
 }
-#rail{
-  width: 90%;
-  height: 10px;
-  background-color: white;
-  margin: auto;
-}
-#range{
-  background-color: grey;
-  height: 10px;
-  margin-left: 10px;
-}
-#handle1{
-  width: 0;
-	height: 0;
-  margin-left: -10px;
-  padding-top: 3px;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 20px solid red;
-  float: left;
-}
-#handle2{
-  width: 0;
-	height: 0;
-  margin-right: -10px;
-  padding-top: 3px;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 20px solid red;
-  float: right;
+.limits{
+  padding-bottom: 3px;
+  font-size: 14px
 }
 /*******************************/
+.error{
+  clear: left;
+  display: none;
+  position: absolute;
+  margin-bottom: 20px;
+}
 #submit{
-  margin-top: 13px;
+  margin-top: 18px;
   width: 200px;
   padding: 3px;
 }

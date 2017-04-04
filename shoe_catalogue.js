@@ -152,11 +152,13 @@ function validateForm() {
     document.querySelector("#errBrand").style.display = "block";
     flag = false;
   }
-  if(document.querySelector("#color").value == ""){
+  console.log(document.querySelector("#color").value);
+  if(document.querySelector("#color").value.length == 0){
     document.querySelector("#errBrand").style.display = "block";
     flag = false;
   }
-  if(document.querySelector("#sizes").value == ""){
+  console.log(document.querySelector("#sizes").value);
+  if(document.querySelector("#sizes").value.length == 0){
     document.querySelector("#errBrand").style.display = "block";
     flag = false;
   }
@@ -169,7 +171,7 @@ function validateForm() {
 // console.log(stock);
 var submit = document.querySelector("#submit");
 submit.addEventListener("click",function() {
-  var copy = document.querySelector(".shoe");
+  var copy = document.querySelector(".shoe").cloneNode("deep");
   copy.querySelector(".brand").innerHTML = document.querySelector("#brand").value;
   copy.querySelector(".color").innerHTML = document.querySelector("#color").value;
   copy.querySelector(".price").innerHTML = document.querySelector("#price").value;
@@ -177,14 +179,10 @@ submit.addEventListener("click",function() {
   copy.querySelector(".sex").innerHTML = document.querySelector("#sex").value;
   copy.querySelector(".size").innerHTML = document.querySelector("#sizes").value;
   copy.querySelector(".image").src = document.querySelector("#image").value.substring(12);
-  shoes.appendChild(copy);
+  if(validateForm()){
+    shoes.appendChild(copy);
+    style.display = "none";
+  }
   brandFilter(brandFocus);
-})
+});
 //**************Price Filtering*****************
-var rail = document.querySelector("#rail");
-rail.addEventListener("click",function() {
-  console.log(event.clientX);
-  console.log(event.screenX);
-  console.log(event.screenX-event.clientX);
-  // document.querySelector("#range").style.marginLeft = (event.screenX - event.clientX)+"px";
-})

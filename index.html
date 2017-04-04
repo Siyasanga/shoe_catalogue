@@ -13,32 +13,32 @@
           <div class="inp">
             <label for="brand">Brand:</label>
             <input type="text" id="brand" name="brand" required placeholder="Enter brand name">
-            <p style="display:none"class="error" id="errBrand">brand name is a required field</p>
+            <p class="error" id="errBrand">brand name is a required field</p>
           </div>
           <div class="inp">
             <label for="color">Color:</label>
             <input type="text" id="color" name="color" placeholder="Enter shoe color">
-            <p style="display:none"class="error" id="errColor">shoe color is a required field</p>
+            <p class="error" id="errColor">shoe color is a required field</p>
           </div>
           <div class="inp">
             <label for="sizes">Avalable sizes:</label>
             <input type="text" id="sizes" name="sizes" placeholder="Enter size for each pair, e.g: 3,3,5,7" style="width:240px"><br>
-            <p style="display:none"class="error" id="errSize">please make sure size for each pair is seperated by a comma</p>
+            <p class="error" id="errSize">please make sure size for each pair is seperated by a comma</p>
           </div>
           <div class="inp">
             <label for="sex">Sex:</label>
             <input type="text" id="sex" name="sex" placeholder="Enter sex type e.g Male">
-            <p style="display:none"class="error" id="errColor">Sex is a required field</p>
+            <p class="error" id="errColor">Sex is a required field</p>
           </div>
           <div class="inp">
             <label for="color">Price: R</label>
             <input type="number" id="price" name="price" placeholder="Enter shoe price" style="width:120px">
-            <p style="display:none"class="error" id="errColor">shoe price is a required field</p>
+            <p class="error" id="errColor">shoe price is a required field</p>
           </div>
           <div class="inp">
             <label for="image">Upload Picture of the shoe:</label>
             <input type="file" id="image" name="image">
-            <p style="display:none"class="error" id="errImage">Don't forget to upload the picture</p>
+            <p class="error" id="errImage">Don't forget to upload the picture</p>
           </div>
           <br>
           <button type="submit" id="submit" name="button">Submit Stock</button>
@@ -108,14 +108,7 @@
           </li>
           <li><h3>Price Range</h3>
             <div class="panel">
-              <div id="rail">
-                <div class="container">
-                  <div id="range">
-                  <div id="handle1" draggable="true"></div>
-                  <div id="handle2" draggable="true"></div>
-                </div>
-                </div>
-              </div>
+                R<input class="limits" style="width:50px;height:20px" type="number" name="min"> --- R<input class="limits" style="width:50px;height:20px" type="number" name="max">
             </div>
           </li>
         </ul>
