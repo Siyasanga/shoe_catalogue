@@ -1,0 +1,77 @@
+header{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/********Price Filter*********/
+.panel{
+  margin-top: -20px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: lighter;
+}
+.limits{
+  padding-bottom: 3px;
+  font-size: 14px
+}
+/*******************************/
+.error{
+  clear: left;
+  display: none;
+  position: absolute;
+  margin-bottom: 20px;
+}
+#submit{
+  margin-top: 18px;
+  width: 200px;
+  padding: 3px;
+}
+.stock{
+  display: none;
+}
+.inp{
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.error{
+  color: red;
+  font-size: 0.9em;
+  margin-top: 1px;
+  text-align: left;
+}
+.brandOn{
+  display: inline-block;
+}
+.brandOff{
+  display: none;
+}
+.sex{
+  display: none;
+}
+h2{
+  margin:auto;
+  padding-left: 20px;
+}
+.shoe{
+  width: 300px;
+  overflow: auto;
+  padding-left: 10px;
+}
+img{
+  height: 181px;
+  width: 261px;
+}
+.sideNav{
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  overflow:hidden;
+}
+.shoes{
+  display: inline-block;
+  width: 75%;
+  margin: auto;
+  text-align: justify;
+}
