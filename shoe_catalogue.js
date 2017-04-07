@@ -1,3 +1,5 @@
+var shoeBrands = [];
+var shoeColors = [];
 var stock = [
   {
     brand:"Bronx",
@@ -181,8 +183,46 @@ var stock = [
     size:["6","7","8","10"],
     img:"file:///home/bootcamp/projects/shoe_catalogue/gucci/brown.jpg"
   }];
-
-var shoe = document.querySelector("#shoe-template").innerHTML;
-var template = Handlebars.compile(shoe);
-var result = template({shoes:stock});
+//******************Getting all available colors***********************
+var colorList = [];
+function getColors() {
+  for(var i=0; i<stock.length; i++){
+    if(colorList.indexOf(stock[i].color)==-1){
+      color = {color:""};
+      color.color = stock[i].color;
+      shoeColors.push(color);
+      colorList.push(color.color);
+    }
+  } // end of loop
+  return shoeColors;
+} // end of getColors
+//*****************Getting all available Brands************************
+var brandlist = [];
+function getBrands() {
+  for(var i=0; i<stock.length; i++){
+    if(brandlist.indexOf(stock[i].brand)==-1){
+      brand = {brand:""};
+      brand.brand = stock[i].brand;
+      shoeBrands.push(brand);
+      brandlist.push(brand.brand);
+    } // end of loop
+  } // end of loop
+  return shoeBrands;
+} // end of shoeBrands
+getColors();
+getBrands();
+//*********************Compiling shoe template*************************
+var shoeScript = document.querySelector("#shoe-template").innerHTML;
+var compShoe = Handlebars.compile(shoeScript);
+var result = compShoe({shoe:stock});
 document.querySelector(".main").innerHTML+=result;
+//*******************Compiling shoe brands menu*************************
+var menuscript = document.querySelector("#brandOptions").innerHTML;
+var compMenu = Handlebars.compile(menuscript);
+var menuItem = compMenu({shoeBrand:shoeBrands});
+document.querySelector(".brands").innerHTML+=menuItem;
+//*******************Compiling shoe colors menu*************************
+var colorscript = document.querySelector("#colorOptions").innerHTML;
+var compColor = Handlebars.compile(colorscript);
+var colorResult = compColor({shoeColor:shoeColors});
+document.querySelector(".colorOptions").innerHTML += colorResult;

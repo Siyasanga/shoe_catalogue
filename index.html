@@ -16,17 +16,29 @@
       <div class="aside">
         <h2>Refine results:</h2>
         <ul>
-          <li><h3>Brands</h3>
-            <div class="radio" id="all">
-              <input type="radio" name="brand" value="All" checked="true">
+          <li class="brands"><h3>Brands</h3>
+            <div class="brandOption">
+              <input class="check" type="checkbox">
               <label for="brand">All</label>
             </div>
-          </li>
-          <li><h3>Color</h3>
-            <div class="radio" id="allc">
-              <input type="radio" name="color" value="all">
-              <label for="color">All</label>
+            <script id="brandOptions" type="text/x-handlebars-template">
+            {{#each shoeBrand}}
+            <div class="brandOption">
+              <input class="check" type="checkbox">
+              <label for="brand">{{brand}}</label>
             </div>
+            {{/each}}
+            </script>
+          </li>
+          <li class="colorOptions"><h3>Color</h3>
+            <script id="colorOptions" type="text/x-handlebars-template">
+            {{#each shoeColor}}
+              <div class="colorOption">
+                <input class="check" type="checkbox">
+                <label for="brand">{{color}}</label>
+              </div>
+            {{/each}}
+            </script>
           </li>
           <li><h3>Price Range</h3>
             <div class="panel">
@@ -37,7 +49,7 @@
       </div>
       <div class="main">
         <script id="shoe-template" type="text/x-handlebars-template">
-          {{#each shoes}}
+          {{#each shoe}}
           <div class="shoe">
             <img class="image" src={{img}} alt="picture of this shoe">
             <p class="info">
