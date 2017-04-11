@@ -15,17 +15,17 @@
       </div>
       <div class="aside">
         <h2>Refine results:</h2>
-        <ul>
+        <div>
           <li class="brands"><h3>Brands</h3>
             <div class="brandOption">
               <input class="check" type="checkbox">
-              <label for="brand">All</label>
+              <label class="option">All</label>
             </div>
             <script id="brandOptions" type="text/x-handlebars-template">
             {{#each shoeBrand}}
             <div class="brandOption">
               <input class="check" type="checkbox">
-              <label for="brand">{{brand}}</label>
+              <label class="option" for="brand">{{brand}}</label>
             </div>
             {{/each}}
             </script>
@@ -35,7 +35,7 @@
             {{#each shoeColor}}
               <div class="colorOption">
                 <input class="check" type="checkbox">
-                <label for="brand">{{color}}</label>
+                <label for="option">{{color}}</label>
               </div>
             {{/each}}
             </script>
@@ -45,7 +45,7 @@
               R<input class="limits" style="width:50px;height:20px" type="number" name="min"> --- R<input class="limits" style="width:50px;height:20px" type="number" name="max">
             </div>
           </li>
-        </ul>
+        </div>
       </div>
       <div class="main">
         <script id="shoe-template" type="text/x-handlebars-template">
