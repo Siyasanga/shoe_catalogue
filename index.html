@@ -25,17 +25,21 @@
             {{#each shoeBrand}}
             <div class="brandOption">
               <input class="check" type="checkbox">
-              <label class="option" for="brand">{{brand}}</label>
+              <label class="option" for="brand">{{this}}</label>
             </div>
             {{/each}}
             </script>
           </li>
-          <li class="colorOptions"><h3>Color</h3>
+          <li class="colors"><h3>Color</h3>
+            <div class="colorOption">
+              <input class="check" type="checkbox">
+              <label class="option">All</label>
+            </div>
             <script id="colorOptions" type="text/x-handlebars-template">
             {{#each shoeColor}}
               <div class="colorOption">
                 <input class="check" type="checkbox">
-                <label for="option">{{color}}</label>
+                <label class="option">{{this}}</label>
               </div>
             {{/each}}
             </script>
