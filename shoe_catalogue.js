@@ -1,5 +1,6 @@
 var shoeBrands = [];
 var shoeColors = [];
+var filtered = [];
 var stock = [
   {
     brand:"Bronx",
@@ -183,62 +184,61 @@ var stock = [
     size:["6","7","8","10"],
     img:"gucci/brown.jpg"
   }];
-//******************Getting all available colors***********************
-var colorList = []; // This is where all existing shoe colors are stored
-function getColors() {
+//******************Getting all property types***********************
+function getOptions(property) {
+  var result = [];
   for(var i=0; i<stock.length; i++){
-    if(colorList.indexOf(stock[i].color)==-1){
-      colorList.push(stock[i].color);
+    if(result.indexOf(stock[i][property])==-1){
+      result.push(stock[i][property]);
     }
   } // end of loop
-  return colorList;
+  return result;
 } // end of getColors
-getColors();
-//*****************Getting all available Brands************************
-var brandlist = []; // This is where all types of brands are stored
-function getBrands() {
-  for(var i=0; i<stock.length; i++){
-    if(brandlist.indexOf(stock[i].brand)==-1){
-      brandlist.push(stock[i].brand);
-    } // end of loop
-  } // end of loop
-  return brandlist;
-} // end of getBrands
-getBrands();
-//***********************Filtering Engine******************************
-var view = document.querySelector(".main");
-var brandFocus =[]; // This is how we know which brands to display
-var colorFocus = []; // This is how we know which color to display
+var brandlist = getOptions("brand"); // This is where all types of brands are stored
+var colorList = getOptions("color"); // This is where all existing shoe colors are stored
 //*********************Engine for filtering stock*************************
-function filterDisplay(focus,property){
-  var main = document.querySelector(".main");
-  for(var i=1; i<main.children.length; i++){
-    if(focus.indexOf(main.children[i].querySelector(property).innerHTML) !== -1){
-      main.children[i].style.display="inline-block";
-    }
-    else {
-      main.children[i].style.display="none";
+function filterDisplay(property,value,data){
+  var result = [];
+  for(var i=0; i<data.length; i++){
+    if(data[i][property] == value){
+      filtered.push(data[i]);
+      result.push(data[i]);
     }
   }// end of for
+  newResult = compShoe({shoe:filtered});
+  document.querySelector(".main").innerHTML=newResult;
+  return result;
+} // end of filterDisplay
+function removeFilter(property,value){
+  var result = [];
+  for(var i=0; i<filtered.length; i++){
+    if(filtered[i][property] !== value){
+      result.push(filtered[i]);
+    }
+  }// end of for
+  filtered = result;
+  newResult = compShoe({shoe:filtered});
+  document.querySelector(".main").innerHTML=newResult;
+  return result;
 } // end of filterDisplay
 //*************************Filtering*******************************
-function filter(event,focus,property) {
+function filter(event,property) {
   if(event.srcElement.classList.value == "check") {
     var status = event.srcElement.parentNode.children[0].checked;
     if(status){
-      focus.push(event.srcElement.parentNode.children[1].innerHTML);
-      filterDisplay(focus,property);
+      if(property == "color"){
+        filterDisplay(property,event.srcElement.parentNode.children[1].innerHTML,filtered);
+        return;
+      }
+      filterDisplay(property,event.srcElement.parentNode.children[1].innerHTML,stock);
     }
     else {
-      focus.splice(focus.indexOf(event.srcElement.parentNode.children[1].innerHTML),1);
-      filterDisplay(focus,property);
+      removeFilter(property,event.srcElement.parentNode.children[1].innerHTML,filtered);
     }
   }//end of inner if
 } // end of filter
 //**************************Price Filtering******************************
-function priceFiltering() {
-  
-}
+
 //*********************Compiling shoe template***************************
 var shoeScript = document.querySelector("#shoe-template").innerHTML;
 var compShoe = Handlebars.compile(shoeScript);
@@ -257,11 +257,10 @@ document.querySelector(".colors").innerHTML += colorResult;
 //********************Making Brand checkboxes work*********************
 var brandDiv = document.querySelector(".brands");
 brandDiv.addEventListener('click',function () {
-  filter(event,brandFocus,".brand");
+  filter(event,"brand");
 },false);
 //********************Making color checkboxes work*********************
 var colorDiv = document.querySelector(".colors");
 colorDiv.addEventListener('click',function () {
-  console.log("Hellow");
-  filter(event,colorFocus,".color");
+  filter(event,"color");
 },true);
