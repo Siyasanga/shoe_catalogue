@@ -196,15 +196,40 @@ function getOptions(property) {
 } // end of getColors
 var brandlist = getOptions("brand"); // This is where all types of brands are stored
 var colorList = getOptions("color"); // This is where all existing shoe colors are stored
+var count = 0;
 //*********************Engine for filtering stock*************************
-function filterDisplay(property,value,data){
+function filterDisplay(selected,source){
+  property = selected;
+  value = property.innerHTML;
+  source = stock;
+  if(property.classList[0] == "Brand"){
+    property = "brand";
+    activeBrands.push(value);
+    values = activeBrands;
+    count++;
+  }
+  else {
+    activeColors.push(value);
+    if (activeBrands.length !== 0) {
+      source = filtered;
+    }
+    property = "color";
+    values = activeColors;
+    console.log(values);
+  }
   var result = [];
-  for(var i=0; i<data.length; i++){
-    if(data[i][property] == value){
-      filtered.push(data[i]);
-      result.push(data[i]);
+  for(var i=0; i<source.length; i++){
+    for(var j=0; j<values.length; j++){
+      if(source[i][property] == values[j]){
+        result.push(source[i]);
+      }
     }
   }// end of for
+  filtered = result;
+  console.log(filtered);
+  // if(count>0){
+  //   filterDisplay()
+  // }
   newResult = compShoe({shoe:filtered});
   document.querySelector(".main").innerHTML=newResult;
   return result;
@@ -222,18 +247,18 @@ function removeFilter(property,value){
   return result;
 } // end of filterDisplay
 //*************************Filtering*******************************
-function filter(event,property) {
+var activeColors = [];
+var activeBrands = [];
+function filter(event) {
   if(event.srcElement.classList.value == "check") {
-    var status = event.srcElement.parentNode.children[0].checked;
+    var status = event.srcElement.checked;
     if(status){
-      if(property == "color"){
-        filterDisplay(property,event.srcElement.parentNode.children[1].innerHTML,filtered);
-        return;
-      }
-      filterDisplay(property,event.srcElement.parentNode.children[1].innerHTML,stock);
+        console.log("Select");
+        filterDisplay(event.srcElement.nextElementSibling,filtered);
     }
     else {
-      removeFilter(property,event.srcElement.parentNode.children[1].innerHTML,filtered);
+      console.log("Deselect");
+      // removeFilter(filtered);
     }
   }//end of inner if
 } // end of filter
