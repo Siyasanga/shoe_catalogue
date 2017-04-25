@@ -156,12 +156,12 @@ function validateForm() {
   }
   console.log(document.querySelector("#color").value);
   if(document.querySelector("#color").value.length == 0){
-    document.querySelector("#errBrand").style.display = "block";
+    document.querySelector("#errColor").style.display = "block";
     flag = false;
   }
   console.log(document.querySelector("#sizes").value);
   if(document.querySelector("#sizes").value.length == 0){
-    document.querySelector("#errBrand").style.display = "block";
+    document.querySelector("#errSize").style.display = "block";
     flag = false;
   }
   if(document.querySelector("#image").value == ""){

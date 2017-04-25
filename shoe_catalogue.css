@@ -10,13 +10,52 @@ body{
   vertical-align: middle;
   font-size: 1.3em;
 }
-
-.brandOption{
+/*****************Form*********************/
+.error{
+  clear: left;
+  position: absolute;
+  margin-bottom: -10px;
+}
+#submit, #cancel{
+  margin-top: 18px;
+  width: 150px;
+  padding: 3px;
+  margin-left: 10px;
+}
+.inp{
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.error{
+  color: red;
+  font-size: 0.9em;
+  margin-top: 1px;
+  text-align: left;
+}
+#newStock{
+  padding: 20px;
+  text-align: center;
+}
+/**********************************/
+.brandOption, .colorOption{
   overflow: auto;
   text-align: left;
   width: 100%;
   padding: 5px;
   background-color: grey;
+  padding-left: 20px;
+  border-bottom: 1px solid red;
+}
+h3, .panel{
+  padding-left: 15px;
+}
+.Brand{
+  display: inline-block;
+  width: 80%;
+}
+li{
+  list-style: none;
 }
 .aside{
   display: inline-block;
@@ -25,6 +64,7 @@ body{
   background-color: skyblue;
   vertical-align: top;
   overflow: hidden;
+  padding-bottom: 30px;
 }
 nav{
   text-align: center;
